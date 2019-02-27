@@ -1,3 +1,8 @@
+%             Abraham Rodriguez Vazquez
+%
+% Código para calcular la matriz de transformación
+% homogenea para un brazo robótico de 7 grados de libertad
+
 n = 7; % DOF
 
 % Inicializacion de coordenadas y parametros del brazo robótico
