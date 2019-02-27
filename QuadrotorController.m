@@ -1,4 +1,4 @@
-function [f,M] = getControl(m,J,s,traj,t)
+function [f,M] = ControladorQuad(m,J,s,traj,t)
 
 
     % Cosechar valores de vector s de estado
