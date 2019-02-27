@@ -1,5 +1,15 @@
+%               Abraham Rodriguez Vazquez
+% 
+% Función para correr simulación 
+% de un controlador para cuadricóptero
+%
+% Parametros:
+% m: masa del vehículo
+% J: momento de inercia 
+% s: matríz de orientación y velocidad angular
+% traj: vector con los coeficientes las trayectorias polinómicas a seguir. 
+% t: tiempo
 function [f,M] = ControladorQuad(m,J,s,traj,t)
-
 
     % Cosechar valores de vector s de estado
     r = [s(1);s(2);s(3)]; % Posicion del quadrotor en el world frame
