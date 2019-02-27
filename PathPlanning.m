@@ -1,4 +1,4 @@
-function C = waypoints(boundary, ps, ts)
+function C = PlaneacionRutaQuad(boundary, ps, ts)
     
     %%------------------------ Inicializacion -------------------------
     % Inicializar matriz q que es cuadrada de 8*m m siendo el numero de
