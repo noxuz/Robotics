@@ -1,5 +1,12 @@
 function M = Union_Imagenes_Deformacion(deformacion_frac,disol_frac)
 
+%                Abraham Rodriguez Vazquez
+%
+% Funcion para encontrar el objeto promedio entre dos imagenes,
+% realizando un match entre caracteristicas y mediante deformacion
+% de triangulos se calcuula el objeto promedio, no es un simple  
+% promedio de imagenes.
+
 if nargin < 1
     deformacion_frac = .5;
 end
