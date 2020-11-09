@@ -3,6 +3,6 @@ Code from labs and exercises from the Robotics MicroMaster program from The Univ
 
 Author: Abraham Rodríguez Vázquez
 
-B.S. Mechanical Engineering student at ITESO 2015-1019
+B.S. Mechanical Engineering student at ITESO 2015-2019
 
 rguez.abraham@gmail.com
