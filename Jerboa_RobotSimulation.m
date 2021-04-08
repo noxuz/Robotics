@@ -4,6 +4,11 @@
 % From the UPenn Robotics Micromasters program at edX.org
 %  
 % Abraham Rodriguez Vazquez  
+% 
+% More information in the following links:
+%
+% https://www.youtube.com/watch?v=wvYthkpRFfk&ab_channel=kodlab
+% https://kodlab.seas.upenn.edu/uploads/Main/compositionTR.pdf
 
 % Robot parameters
 param.d = 0.08;                 % ball diameter
