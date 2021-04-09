@@ -3,6 +3,6 @@ Code for labs and exercises from the Robotics MicroMaster program at The Univers
 
 Author: Abraham Rodríguez Vázquez
 
-B.S. Mechanical Engineering student at ITESO 2015-2019
+B.s. Mechanical Engineering.
 
 rguez.abraham@gmail.com
