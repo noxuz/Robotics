@@ -1,5 +1,5 @@
 
-Code from labs and exercises from the Robotics MicroMaster program from The University of Pennsylvania through edx.org and Artificial Intelligence class.
+Code for labs and exercises from the Robotics MicroMaster program at The University of Pennsylvania through edx.org, and Artificial Intelligence applied to finance college classes.
 
 Author: Abraham Rodríguez Vázquez
 
