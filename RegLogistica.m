@@ -1,11 +1,19 @@
 %               Abraham Rodriguez Vázquez
-%
-% Algoritmo para implementar regresión logistica a un dataset
+% Codigo para realizar regresion logistica al conjunto de
+% datos Iris incorporado en MATLAB
+% Abril/2021
 
-datos = csvread('datos.txt');
+% Limpieza inicial
+clear;clc;close all;
+
+% Preprocesado
+dataset = iris_dataset';
+dataset = dataset(1:100,:);
+clases = vertcat(zeros(50,1),ones(50,1));
+datos = horzcat(dataset,clases);
 
 x = datos(:,1:2);
-y = datos(:,3);
+y = datos(:,end);
 
 longitud = length(y);
 m = longitud;
@@ -22,17 +30,18 @@ for i = 2:3
 end
 
 
-% Inicializacion de variables
+% Inicializacion de variables e hiperparametros
 alfa = .07;
 thetas = zeros(3,1);
 temp = ones(3,1);
 iteraciones = 1000;
 J = zeros(1,iteraciones);
 
-equis1 = linspace(-20,20);
-equis2 = linspace(-20,20);
+% Matrices para graficado con contour
+[X,Y] = meshgrid(linspace(-20,20),linspace(-20,20));
 
-[X,Y] = meshgrid(equis1,equis2);
+figure;
+title('Divisor entre I. Setosa y I. Versicolor');
 
 % Inicio de optmización
 for k = 1:iteraciones
@@ -43,30 +52,33 @@ for k = 1:iteraciones
         end   
         
         % Evaluar costo
-        J(k) = (-1/m)* sum( y .* log(h(x,thetas)) + ((1-y) .* log(1- h(x,thetas))));   
-     
+        J(k) = (-1/m)* sum( y .* log(h(x,thetas)) + ((1-y) .* log(1- h(x,thetas))));
+        
      % Asignar parámetros 
      for j = 1:3
             thetas(j) = temp(j);
      end
         
-     % Graficar   
-     scatter(x(losceros,2),x(losceros,3),'x','r')
+     % Graficar
+     scatter(x(1:50,2),x(1:50,3),'x','r')
      hold on
-     scatter(x(losunos,2),x(losunos,3),'o','b')
+     scatter(x(51:100,2),x(51:100,3),'o','b')
      
      contour(X,Y,(1./(1 + exp(-(thetas(1) + thetas(2)*X + thetas(3)*Y))))');
-      
+     xlim([-5 5])
+     ylim([-5 5]) 
      pause(.01)
-     hold
+     hold 
 end
 
 
 pause(3)
+figure;
 plot(1:iteraciones,J)
 title('Costo-Iteraciones')
 
 
+% Funcion auxiliar sigmoide
 function valorsigmoide = h(x, thetas)
 valorsigmoide = (1./(1 + exp(-(thetas'*x'))))';
 
